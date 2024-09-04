@@ -11,4 +11,13 @@ export default defineNuxtConfig({
     '@mdi/font/css/materialdesignicons.css', // Import MDI CSS here
   ],
 
+  runtimeConfig:{
+    dbUrl : process.env.DB_URL 
+  },
+  generate:{
+    routes:['/']
+  }
+
+  
+
 })

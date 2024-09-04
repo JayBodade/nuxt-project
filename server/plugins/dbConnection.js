@@ -1,6 +1,8 @@
 import mongoose from "mongoose"
 export default defineNitroPlugin((nitroApp) => {
-  const url = process.env.DB_URL;
+  const config = useRuntimeConfig();
+
+  const url = config.dbUrl;
   mongoose.connect(url).then(()=>{
     console.log("connected to database");
   }).catch((e)=>{
