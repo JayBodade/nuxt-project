@@ -14,11 +14,11 @@ export default defineNuxtConfig({
   runtimeConfig:{
     dbUrl : process.env.DB_URL 
   },
-  generate:{
-    routes:['/']
-  },
   nitro:{
     preset:'node-server'
+  },
+  routeRules:{
+    '/': { prerender: true },
   }
 
   
