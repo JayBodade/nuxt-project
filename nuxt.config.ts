@@ -14,9 +14,6 @@ export default defineNuxtConfig({
   runtimeConfig:{
     dbUrl : process.env.DB_URL 
   },
-  nitro:{
-    preset:'node-server'
-  },
   routeRules:{
     '/': { swr: true },
   }
