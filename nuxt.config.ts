@@ -10,10 +10,5 @@ export default defineNuxtConfig({
     'vuetify/styles',
     '@mdi/font/css/materialdesignicons.css', // Import MDI CSS here
   ],
-  hooks:{
-     "prerender:routes"(ctx){
-      ctx.routes.add('/')
-    }
-  }
 
 })
