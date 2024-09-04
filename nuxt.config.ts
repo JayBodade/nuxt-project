@@ -16,6 +16,9 @@ export default defineNuxtConfig({
   },
   generate:{
     routes:['/']
+  },
+  nitro:{
+    preset:'node-server'
   }
 
   
