@@ -18,7 +18,7 @@ export default defineNuxtConfig({
     preset:'node-server'
   },
   routeRules:{
-    '/': { prerender: true },
+    '/': { swr: true },
   }
 
   
