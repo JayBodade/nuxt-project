@@ -15,7 +15,7 @@ export default defineNuxtConfig({
     dbUrl : process.env.DB_URL 
   },
   routeRules:{
-    '/': { swr: true },
+    '/': { isr: true },
   }
 
   
