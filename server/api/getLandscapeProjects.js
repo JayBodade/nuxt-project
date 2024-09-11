@@ -1,9 +1,8 @@
 import projectModel from "../model/project.model";
 export default defineEventHandler(async (event) => {
   if(event.node.req.method == "GET"){
-    const projects = await projectModel.find({projectType:'Landscape'});
+    const projects = await projectModel.find({projectType:'Landscape'}).sort({ projectRating: -1 }).limit(6);
     event.node.res.statusCode = 200;
-    console.log("this is projects",projects);
     return projects;
     
     

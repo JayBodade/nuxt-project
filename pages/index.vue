@@ -55,28 +55,28 @@
             <v-tabs-window-item :value="1">
                 <v-row class="pa-4" >
                     <v-col cols="4"  v-for="project in allprojects" :key="project._id" >
-                        <product :projectItem="project" ></product>
+                     <product path="/project" :projectItem="project"> </product>
                     </v-col>
                 </v-row>
             </v-tabs-window-item>
             <v-tabs-window-item :value="2">
                 <v-row class="pa-4" >
                 <v-col cols="4" v-for="project in interiorProjects" :key="project._id" >
-                        <product :projectItem="project"></product>
+                         <product path="/project" :projectItem="project"> </product>
                     </v-col>
                 </v-row>
             </v-tabs-window-item>
             <v-tabs-window-item :value="3">
                 <v-row class="pa-4" >
                 <v-col cols="4" v-for="project in landScapeProjects" :key="project._id" >
-                        <product :projectItem="project"></product>
+                     <product path="/project" :projectItem="project"> </product>
                     </v-col>
                     </v-row>
             </v-tabs-window-item>
             <v-tabs-window-item :value="4">
                 <v-row class="pa-4" >
                 <v-col cols="4" v-for="project in architecuralProjects" :key="project._id" >
-                        <product :projectItem="project"></product>
+                        <product path="/project" :projectItem="project"></product>
                     </v-col>
                     </v-row>
             </v-tabs-window-item>
