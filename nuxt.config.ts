@@ -31,7 +31,7 @@ export default defineNuxtConfig({
 
   hooks:{
     async "prerender:routes" (ctx){
-      let projects = await fetch('/api/getAllProjects');
+      let projects = await fetch('https://nuxt-project-sandy.vercel.app//api/getAllProjects');
       const result = await projects.json();
 
       result.forEach((item:any)=>{
