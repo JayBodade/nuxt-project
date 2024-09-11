@@ -31,7 +31,7 @@ export default defineNuxtConfig({
 
   hooks:{
     async "prerender:routes" (ctx){
-      let projects = await fetch('http://localhost:3000/api/getAllProjects');
+      let projects = await fetch('/api/getAllProjects');
       const result = await projects.json();
 
       result.forEach((item:any)=>{
