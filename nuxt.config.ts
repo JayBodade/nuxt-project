@@ -27,7 +27,7 @@ export default defineNuxtConfig({
    '/': { isr: true },  
    '/projects':{isr:true},
     '/about': { prerender: true },  
-    '/contact/': { ssr: false },  
+    '/contact': { ssr: false },  
     '/admin/allproject': { ssr: false }, 
     '/admin/project/**':{ssr:false},
   },
