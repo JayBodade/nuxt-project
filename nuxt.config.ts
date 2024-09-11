@@ -24,10 +24,12 @@ export default defineNuxtConfig({
     
   },
   routeRules:{
-   '/': { isr: true },  // Incremental Static Regeneration for the homepage
-    '/about': { prerender: true },  // Pre-render the about page
-    '/contact/': { ssr: false },  // Disable SSR for the contact page (client-side only)
-    '/admin/**': { ssr: false }, 
+   '/': { isr: true },  
+   '/projects':{isr:true},
+    '/about': { prerender: true },  
+    '/contact/': { ssr: false },  
+    '/admin/allproject': { ssr: false }, 
+    '/admin/project/**':{ssr:false},
   },
 
   hooks:{
