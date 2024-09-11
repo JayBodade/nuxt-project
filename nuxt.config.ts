@@ -24,10 +24,10 @@ export default defineNuxtConfig({
     
   },
   routeRules:{
-    '/': { isr: true },
-    '/about':{prerender:true},
-    '/contact/': { ssr: false },
-    '/admin/**':{ssr:false},
+   '/': { isr: true },  // Incremental Static Regeneration for the homepage
+    '/about': { prerender: true },  // Pre-render the about page
+    '/contact/': { ssr: false },  // Disable SSR for the contact page (client-side only)
+    '/admin/**': { ssr: false }, 
   },
 
   hooks:{
@@ -37,9 +37,11 @@ export default defineNuxtConfig({
 
       result.forEach((item:any)=>{
         ctx.routes.add(`/project/${item._id}`);
-        // ctx.routes.add(`/admin/project/${item._id}`);
       })
     }  
+  },
+  nitro:{
+    compressPublicAssets:true,
   }
   
 
