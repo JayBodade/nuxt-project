@@ -27,6 +27,7 @@ export default defineNuxtConfig({
     '/': { isr: true },
     '/about':{prerender:true},
     '/contact/': { ssr: false },
+    '/admin/**':{ssr:false},
   },
 
   hooks:{
